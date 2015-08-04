@@ -1,0 +1,38 @@
+def LetterCapitalize(str)
+
+  # code goes here
+  aray = str.split(" ")
+  
+  aray.each do |x|
+    
+    x.capitalize!
+  end
+  
+  aray = aray.join(" ")
+  
+  return aray
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+LetterCapitalize(STDIN.gets)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
