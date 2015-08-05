@@ -1,0 +1,58 @@
+def ABCheck(str)
+
+  arr = str.split("")
+  a = Array.new
+  b = Array.new
+  
+  for i in 0..(arr.length-1)
+    if arr[i] == "a"
+    	a << i
+  	end
+  end
+    
+  for i in 0..(arr.length-1)
+    if arr[i] == "b"
+       b << i
+    end
+  end
+  
+  flag = false
+    
+  
+  for i in 0..(a.length - 1)
+    for j in 0..(b.length - 1)
+      if a[i] - b[j] == 4 || a[i] - b[j] == -4 
+        flag = true
+        break
+      end
+    end
+  end
+  
+  
+  return flag
+  
+ 
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+ABCheck(STDIN.gets)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
