@@ -1,0 +1,83 @@
+def ArithGeo(arr)
+
+  
+  num = arr[1] - arr[0]
+  
+  index = 1
+  
+  flag = -1
+  
+  while index != arr.length
+    
+    if arr[index] - arr[index - 1] == num
+      
+      flag = "Arithmetic"
+    
+    else 
+      
+      flag = -1
+      break
+      
+    end
+    
+    index += 1
+    
+  end
+  
+  if flag == "Arithmetic"
+    
+    return flag
+    
+  end
+  
+  
+   index = 1
+  
+   num = arr[1] / arr[0]
+  
+   while index != arr.length
+    
+    if arr[index] / arr[index - 1] == num
+      
+      flag = "Geometric"
+    
+    else 
+      
+      flag = -1
+      break
+      
+    end
+    
+    index += 1
+    
+  end
+  
+  return flag
+  
+  
+  
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+ArithGeo(STDIN.gets)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
