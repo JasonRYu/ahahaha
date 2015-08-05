@@ -1,0 +1,58 @@
+def LetterCountI(str)
+
+  arr = str.split(" ")
+  
+  result = String.new
+  
+  rept = -1
+  
+  arr.each do |x|
+    x.each_char do |y|
+  
+      cnt = x.count y
+      
+      if cnt > rept && cnt > 1
+      
+        rept = cnt
+        result = x
+        
+      end
+      
+      
+      
+    end
+    
+  end
+  
+  if rept == -1
+    return -1
+  else
+    return result
+  end
+  
+    
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+LetterCountI(STDIN.gets)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
