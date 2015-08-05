@@ -1,0 +1,85 @@
+def SimpleSymbols(str)
+  
+  arr = str.split("")
+  
+  characters = ("a".."z").to_a
+  
+  #알파벳이 하나도 없을 경우에 false 반환
+  
+  symbols = ["+", "="]
+  
+  flag = false
+  
+  arr.each do |x|
+    if symbols.include?(x)
+      next
+      
+    elsif characters.include?(x)
+      flag = true
+      break
+      
+    end
+    
+  end
+  
+  
+  
+  arr.each do |x|
+    if characters.include?(x)
+     
+      index1 = arr.index(x) - 1
+      index2 = arr.index(x) + 1
+      
+      if arr[index1] == "+" && arr[index2] == "+"
+        
+        if arr.index(x) == 0 || arr.index(x) == -1
+          
+          flag = false
+          break
+          
+        else
+          
+          next
+          
+        end
+        
+      else
+      
+        flag = false
+        break
+      end
+    else
+      
+      next
+      
+    end
+    
+  end
+  
+  
+  return flag
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+SimpleSymbols(STDIN.gets)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
