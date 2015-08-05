@@ -1,0 +1,42 @@
+def Palindrome(str)
+
+ a = str.split(" ").join("")
+ b = a.reverse
+ 
+  flag = false
+  
+  if a.eql?(b)
+  
+    flag = true
+    
+  end
+  
+  
+  return flag
+  
+  
+  
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+Palindrome(STDIN.gets)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
