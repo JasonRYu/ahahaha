@@ -1,0 +1,65 @@
+def ArrayAdditionI(arr)
+  
+  par = 0
+  
+  arr.each do |x|
+    
+    if x > par == true
+    
+     par = x 
+      
+    end
+    
+  end
+  
+  flag = false
+  result = Array.new
+  
+  for i in (2..arr.length-1)
+    
+   
+    result = arr.combination(i).to_a
+    
+    for j in (0..result.length - 1)
+    	sum = 0
+      for y in (0..i-1)
+        
+          sum += result[j][y]
+        
+        end
+      if sum == par 
+        
+        return true
+        
+      end
+      
+    end
+    
+  end
+  
+  return false
+ 
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+ArrayAdditionI(STDIN.gets)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
