@@ -1,0 +1,60 @@
+def ExOh(str)
+
+  
+  arr = str.split("")
+  
+  sum1 = 0
+  sum2 = 0
+  
+  flag = false
+  
+  arr.each do |x|
+  
+    if x == "x"
+    
+      sum1 += 1 	  
+    
+    elsif x == "o"
+      
+      sum2 += 1
+    
+    end
+        
+  end
+  
+  if sum1 == sum2 && sum1 != 0
+    
+    flag = true
+    
+  end
+  
+  return flag
+  
+  
+  
+
+         
+end
+   
+# keep this function call here 
+# to see how to enter arguments in Ruby scroll down   
+ExOh(STDIN.gets)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
